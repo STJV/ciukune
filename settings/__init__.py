@@ -10,6 +10,5 @@ include(
     'rest.py',
     'templates.py',
     'wsgi.py',
-    'webpack.py',
     optional('/etc/ciukune/settings.py')
 )
