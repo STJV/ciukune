@@ -1,17 +1,18 @@
 """Urls for ciukune core."""
+from sys import stdout
 from django.urls import include
 from django.urls import path
 from django.urls import re_path
 from django.views.generic import TemplateView
 from rest_framework.routers import DefaultRouter
 
-from ciukune.views import LoginView
-from ciukune.views import LogoutView
-from ciukune.views import PasswordChangeView
-from ciukune.views import PasswordResetView
-from ciukune.views import PasswordResetConfirmView
-from ciukune.views import UserViewSet
-from ciukune.views import CurrentUserView
+from ciukune.views.auth import LoginView
+from ciukune.views.auth import LogoutView
+from ciukune.views.auth import PasswordChangeView
+from ciukune.views.auth import PasswordResetView
+from ciukune.views.auth import PasswordResetConfirmView
+from ciukune.views.user import UserViewSet
+from ciukune.views.auth import CurrentUserView
 
 def _get_auth_url():
     login = LoginView.as_view()
@@ -25,9 +26,7 @@ def _get_auth_url():
     return include([
         path('/login/', login, name='login'),
         path('/logout/', logout, name='logout'),
-        path('/password-reset-confirm/',
-             reset_confirm,
-             name='password_reset_confirm'),
+        path('/password-reset-confirm/', reset_confirm, name='password_reset_confirm'),
         path('/password-reset/', reset, name='password_reset'),
         path('/user/', user, name='user_details'),
         path('/password-change/', password_change, name='password_change'),

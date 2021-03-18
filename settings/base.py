@@ -15,7 +15,7 @@ ROOT_URLCONF = 'urls'
 
 LOGIN_URL = '/api-auth/login'
 
-SECRET_KEY = '5cc74*&^b^huo+^q-ft)+t!_(9t04$wk2r&gz*qd%r&i4gm7&d'
+SECRET_KEY = 'secret_key'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'webpack_loader',
     'ciukune.Config',
 ]
 

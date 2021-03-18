@@ -1,14 +1,11 @@
 """Settings related to authorization stuff."""
 _PREFIX = 'django.contrib.auth.password_validation.'
-AUTH_PASSWORD_VALIDATORS = [{
-        'NAME': _PREFIX + 'UserAttributeSimilarityValidator',
-    }, {
-        'NAME': _PREFIX + 'MinimumLengthValidator',
-    }, {
-        'NAME': _PREFIX + 'CommonPasswordValidator',
-    }, {
-        'NAME': _PREFIX + 'NumericPasswordValidator',
-    }]
+AUTH_PASSWORD_VALIDATORS = [
+    {'NAME': _PREFIX + 'UserAttributeSimilarityValidator', },
+    {'NAME': _PREFIX + 'MinimumLengthValidator', },
+    {'NAME': _PREFIX + 'CommonPasswordValidator', },
+    {'NAME': _PREFIX + 'NumericPasswordValidator', }
+]
 
 AUTH_USER_MODEL = 'ciukune_core.User'
 
