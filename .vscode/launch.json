@@ -54,11 +54,11 @@
                 "--runInBand"
             ],
             "sourceMaps": true,
-            "cwd": "${workspaceFolder}/tovaritch/ui",
+            "cwd": "${workspaceFolder}/ciukune/ui",
             "disableOptimisticBPs": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
-            "outFiles": [ "${workspaceFolder}/tovaritch/ui/src/**/*.js"],
+            "outFiles": [ "${workspaceFolder}/ciukune/ui/src/**/*.js"],
             "port": 9229
         }
     ]

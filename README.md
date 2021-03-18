@@ -1,10 +1,10 @@
-[![Build Status](https://drone.stjv.fr/api/badges/com-oi/tovaritch/status.svg)](https://drone.stjv.fr/com-oi/tovaritch)
+[![Build Status](https://drone.stjv.fr/api/badges/com-oi/ciukune/status.svg)](https://drone.stjv.fr/com-oi/ciukune)
 
-# Tovaritch
+# ciukune
 
 ## Overview
 
-Tovaritch is a login frontend / portal that provides usefull services for community
+ciukune is a login frontend / portal that provides usefull services for community
 organization.
 
 ## Production
@@ -86,7 +86,7 @@ then run the server :
 
 Node.js and wepack provides a hot-reload development server, proxied by the
 backend server thanks to the webpack-loader Django module. In order to run the
-frontend server, open a command line in the tovaritch/ui subdirectory, activate the
+frontend server, open a command line in the ciukune/ui subdirectory, activate the
 virtualenv (see [backend_server]) and run :
 
 ```bash

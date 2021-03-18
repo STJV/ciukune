@@ -4,5 +4,5 @@ from django.urls import re_path
 
 urlpatterns = [
     # Core application urls
-    re_path('', include('tovaritch.core.urls')),
+    re_path('', include('ciukune.urls')),
 ]

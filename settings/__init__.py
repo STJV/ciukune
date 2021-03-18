@@ -11,5 +11,5 @@ include(
     'templates.py',
     'wsgi.py',
     'webpack.py',
-    optional('/etc/tovaritch/settings.py')
+    optional('/etc/ciukune/settings.py')
 )

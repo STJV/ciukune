@@ -13,13 +13,13 @@ module.exports = (env, {mode}) => {
   let devMode = (mode === 'development')
   return {
     entry: {
-      core: './tovaritch/core-ui/index.js'
+      core: './ciukune/core-ui/index.js'
     },
     module: {
       rules: [
         {
           test: /\.vue$/,
-          include: resolve(__dirname, 'tovaritch'),
+          include: resolve(__dirname, 'ciukune'),
           use: [ 'cache-loader', 'vue-loader' ]
         }, {
           test: /\.css$/, use: [
@@ -49,7 +49,7 @@ module.exports = (env, {mode}) => {
                   fiber: fibers,
                   indentedSyntax: true,
                 },
-                prependData: `@import "tovaritch/core-ui/styles/main.sass"`,
+                prependData: `@import "ciukune/core-ui/styles/main.sass"`,
               },
             },
           ]

@@ -10,7 +10,7 @@ AUTH_PASSWORD_VALIDATORS = [{
         'NAME': _PREFIX + 'NumericPasswordValidator',
     }]
 
-AUTH_USER_MODEL = 'tovaritch_core.User'
+AUTH_USER_MODEL = 'ciukune_core.User'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
