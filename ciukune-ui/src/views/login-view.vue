@@ -1,14 +1,14 @@
 <template lang="pug">
 ciu-screen-center
   ciu-component
-    header Ciu Kune - Login
-    ciu-input(placeholder="Username")
-    ciu-input(placeholder="Password")
-    ciu-button(type="submit") Login
+    header {{ $t('login-view.title') }}
+    ciu-input(:placeholder="$t('login-view.email')")
+    ciu-input(:placeholder="$t('login-view.password')")
+    ciu-button(type="submit") {{ $t('login-view.login') }}
     hr
     div(class="links-area")
-      a(href='#') Reset&nbsp;Password
-      a(href='#') Create Account
+      a(href='#') {{ $t('login-view.reset-password') }}
+      a(href='#') {{ $t('login-view.register') }}
 </template>
 
 <script lang="ts">
@@ -26,10 +26,6 @@ export default defineComponent({
   display: flex;
   flex-direction: row;
   align-items: stretch;
-}
-
-.links-area > * {
-  flex: 1 1 1px;
 }
 
 .links-area > *:last-child {

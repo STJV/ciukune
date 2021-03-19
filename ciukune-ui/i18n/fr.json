@@ -1,0 +1,10 @@
+{
+  "login-view": {
+    "email": "Couriel",
+    "password": "Mot de passe",
+    "login": "S'identifier",
+    "reset-password": "Mot de passe perdu",
+    "register": "S'enregistrer",
+    "title": "CiuKune - Identification"
+  }
+}

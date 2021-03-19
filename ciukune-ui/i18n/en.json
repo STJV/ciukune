@@ -1,0 +1,10 @@
+{
+  "login-view": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "reset-password": "Reset Password",
+    "register": "Register",
+    "title": "Ciu Kune - Login"
+  }
+}
