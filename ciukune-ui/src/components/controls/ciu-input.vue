@@ -22,8 +22,8 @@ export default defineComponent({
 <style>
 .ciu-input {
   display: grid;
-  height: 1.9rem;
   margin-top: 0.6rem;
+  padding-top: calc(var(--ciu-font-size) * 0.8);
 }
 
 .ciu-input > input {
@@ -32,12 +32,9 @@ export default defineComponent({
   border-left: none;
   border-right: none;
   border-top: none;
-  font-family:var(--ciu-font-family);
-  font-size: 1rem;
-  font-weight: var(--ciu-font-weight);
+  font: var(--ciu-font);
   grid-area: 1 / 1;
-  transition-duration: 0.2s;
-  transition-property: border-bottom;
+  transition: border-bottom 0.2s;
 }
 
 .ciu-input > input:focus {
@@ -49,7 +46,7 @@ export default defineComponent({
   color: var(--ciu-muted-color);
   display: flex;
   grid-area: 1 / 1;
-  font-size: 0.9rem;
+  font-size: 90%;
   transition-duration: 0.2s;
   transition-property: transform font-size;
   z-index: -1;
@@ -60,12 +57,12 @@ export default defineComponent({
 }
 
 .ciu-input > input:focus + .ciu-input-placeholder {
-  font-size: 0.8rem;
-  transform: translate(0px, -1.1rem);
+  font-size: 80%;
+  transform: translate(0px, calc(var(--ciu-font-size) * -1.1));
 }
 
 .ciu-input > input:not(:placeholder-shown) + .ciu-input-placeholder {
-  font-size: 0.8rem;
-  transform: translate(0px, -1.1rem);
+  font-size: 80%;
+  transform: translate(0px, calc(var(--ciu-font-size) * -1.1));
 }
 </style>

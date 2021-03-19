@@ -4,8 +4,8 @@
   --ciu-border-radius: 3px;
   --ciu-spacing: 0.5rem;
 
-  --ciu-font-family:Verdana, Geneva, Tahoma, sans-serif;
-  --ciu-font-weight: 400;
+  --ciu-font-size: 2rem;
+  --ciu-font: 400 var(--ciu-font-size) Verdana, Geneva, Tahoma, sans-serif;
 
   --ciu-box-shadow: 1px 2px 6px 2px #777777;
   --ciu-box-shadow-small: 1px 1px 1px 1px #777777;
@@ -14,7 +14,7 @@
   --ciu-inactive-color: black;
   --ciu-muted-color: #666666;
   --ciu-hint-color: #EEEEEE;
-  --ciu-active-color: #fc7e7e;
+  --ciu-active-color: #ff5e5e;
 }
 
 .ciu-control {
@@ -26,7 +26,5 @@
 body {
   height: 100vh;
   margin: 0px;
-  font-family:var(--ciu-font-family);
-  font-weight: var(--ciu-font-weight);
-  
+  font: var(--ciu-font);
 }
