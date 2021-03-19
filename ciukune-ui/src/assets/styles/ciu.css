@@ -2,9 +2,9 @@
 
 :root {
   --ciu-border-radius: 3px;
-  --ciu-spacing: 0.5rem;
+  --ciu-spacing: 0.7rem;
 
-  --ciu-font-size: 2rem;
+  --ciu-font-size: 1rem;
   --ciu-font: 400 var(--ciu-font-size) Verdana, Geneva, Tahoma, sans-serif;
 
   --ciu-box-shadow: 1px 2px 6px 2px #777777;
@@ -19,7 +19,6 @@
 
 .ciu-control {
   box-sizing: border-box;
-  margin-top: var(--ciu-spacing);
   margin-bottom: var(--ciu-spacing);
 }
 

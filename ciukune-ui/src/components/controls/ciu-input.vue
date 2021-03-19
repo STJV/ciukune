@@ -22,7 +22,6 @@ export default defineComponent({
 <style>
 .ciu-input {
   display: grid;
-  margin-top: 0.6rem;
   padding-top: calc(var(--ciu-font-size) * 0.8);
 }
 
