@@ -1,12 +1,3 @@
-/* Copyright © 2021 STJV contact@stjv.com
-
-  This work is free. You can redistribute it and/or modify it under the
-  terms of the Do What The Fuck You Want To Public License, Version 2,
-  as published by Sam Hocevar. See the COPYING file for more details.
-
-  ResourceManager is a singleton injected through Vue, that keeps weak reference on resources, and return them
-  when their URL is asked twice.
-*/
 import { App } from 'vue'
 import { Backend } from './backend'
 import { InjectionKey } from 'vue'
@@ -30,13 +21,13 @@ class ResourceManager {
       }
     }
 
-    let resource = reactive(new constructor(url, this._backend))
+    let resource = reactive(new constructor(url, this._backend)) as TResource
     this._resources[url] = new WeakRef(resource)
-    return resource as TResource
+    return resource
   }
 
-  _resources: Record<string, WeakRef<Resource>> = {}
-  _backend: Backend
+  private _resources: Record<string, WeakRef<Resource>> = {}
+  private _backend: Backend
 }
 
 const ResourceManagerKey : InjectionKey<ResourceManager> = Symbol()

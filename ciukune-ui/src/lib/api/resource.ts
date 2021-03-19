@@ -1,11 +1,3 @@
-/* Copyright © 2021 STJV contact@stjv.com
-
-  This work is free. You can redistribute it and/or modify it under the
-  terms of the Do What The Fuck You Want To Public License, Version 2,
-  as published by Sam Hocevar. See the COPYING file for more details.
-
-  Resource is the base class for interactions with the rest api.
-*/
 import { Backend } from './backend'
 import { Method } from 'axios'
 
@@ -20,15 +12,15 @@ export abstract class Resource {
   get error() { return this._error }
   get fieldsErrors() { return this._fieldsErrors }
 
-  async _get<TResponse>() : Promise<TResponse | undefined> {
+  protected async _get<TResponse>() : Promise<TResponse | undefined> {
     return await this._query<TResponse, void>('GET', undefined)
   }
 
-  async _post<TResponse, TData>(data: TData) : Promise<TResponse | undefined> {
+  protected async _post<TResponse, TData>(data: TData) : Promise<TResponse | undefined> {
     return await this._query<TResponse, TData>('POST', data)
   }
 
-  async _query<TResponse, TData>(method: Method, data: TData) {
+  private async _query<TResponse, TData>(method: Method, data: TData) {
     let response = await this._backend.query<ApiResponse<TResponse>>(this._url, method, data)
     if(!response) {
       return undefined
@@ -50,8 +42,8 @@ export abstract class Resource {
     }
   }
 
-  _fieldsErrors: Record<string, string> = {}
-  _error: string | undefined
-  _url: string
-  _backend: Backend
+  private _fieldsErrors: Record<string, string> = {}
+  private _error: string | undefined
+  private _url: string
+  private _backend: Backend
 }

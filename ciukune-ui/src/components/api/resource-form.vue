@@ -1,0 +1,24 @@
+<template lang="pug">
+//- This components injects a resource for child components (inputs, error feedback, loading feedback...) to access it.
+form()
+  slot
+</template>
+
+<script lang="ts">
+import { PropType } from 'vue';
+import { Resource } from '../../lib/api/resource'
+import { defineComponent } from 'vue'
+import { setCurrentResource } from './common'
+
+export default defineComponent({
+  props: {
+    'resource': {
+        required: true,
+        type: Object as PropType<Resource>
+    },
+  },
+  setup(props) {
+    setCurrentResource(props.resource)
+  },
+})
+</script>

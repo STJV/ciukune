@@ -1,5 +1,5 @@
-import { Resource } from '../../api/resource'
-import { getResource } from '../../api/resource-manager'
+import { Resource } from '../../resource'
+import { getResource } from '../../resource-manager'
 
 interface LoginResponse {
   token: string
@@ -14,6 +14,7 @@ class LoginResource extends Resource {
       email: this.email,
       password: this.password
     })
+
     if(!response) {
       return;
     }

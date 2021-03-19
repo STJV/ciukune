@@ -1,7 +1,17 @@
 <template lang="pug">
-button(class="ciu-control ciu-ripple")
+button(class="ciu-control ciu-ripple" :type="type")
   slot
 </template>
 
-<style>
-</style>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  props: {
+    'type': String,
+  },
+  setup() {
+    
+  },
+})
+</script>

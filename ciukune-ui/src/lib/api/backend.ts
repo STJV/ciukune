@@ -1,12 +1,3 @@
-/* Copyright © 2021 STJV contact@stjv.com
-
-  This work is free. You can redistribute it and/or modify it under the
-  terms of the Do What The Fuck You Want To Public License, Version 2,
-  as published by Sam Hocevar. See the COPYING file for more details.
-
-  Backend is a light layer above axios, handling JWT authentication and 500-errors interception for displaying
-  or logging without having to handle it in client code.
-*/
 import axios from 'axios'
 import { AxiosInstance } from 'axios'
 import { Method } from 'axios'
@@ -56,7 +47,7 @@ export class Backend {
     this._refreshAuthHeaders()
   }
 
-  _refreshAuthHeaders() {
+  private _refreshAuthHeaders() {
     let token = localStorage.getItem(_AUTH_TOKEN_STORAGE_KEY)
     let defaultHeaders = this._instance.defaults.headers
 
@@ -68,5 +59,5 @@ export class Backend {
     }
   }
 
-  _instance: AxiosInstance
+  private _instance: AxiosInstance
 }
