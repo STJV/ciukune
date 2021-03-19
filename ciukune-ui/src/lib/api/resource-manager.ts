@@ -1,43 +1,27 @@
-import {reactive} from 'vue'
-import Resource from './resource'
-import Backend from './backend'
+/* Copyright © 2021 STJV contact@stjv.com
+
+  This work is free. You can redistribute it and/or modify it under the
+  terms of the Do What The Fuck You Want To Public License, Version 2,
+  as published by Sam Hocevar. See the COPYING file for more details.
+
+  ResourceManager is a singleton injected through Vue, that keeps weak reference on resources, and return them
+  when their URL is asked twice.
+*/
+import { App } from 'vue'
+import { Backend } from './backend'
+import { InjectionKey } from 'vue'
+import { Resource } from './resource'
+import { inject } from 'vue'
+import { reactive } from 'vue'
 
 type ResourceConstructor<TResource extends Resource> = { new(url: string, backend: Backend) : TResource }
 
-interface IResourceFactory {
-  matches(url: string) : boolean;
-  create(url: string, backend: Backend) : Resource;
-}
-
-class ResourceFactory<TResource extends Resource> implements IResourceFactory {
-  constructor(routePattern: string, constructor: ResourceConstructor<TResource>) {
-    this._routePattern = routePattern
-    this._constructor = constructor
-  }
-
-  matches(url: string): boolean {
-    return url.match(this._routePattern) != null
-  }
-
-  create(url: string, backend: Backend): TResource {
-    return reactive(new this._constructor(url, backend)) as TResource
-  }
-
-  _routePattern: string;
-  _constructor: ResourceConstructor<TResource>;
-}
-
-export default class ResourceManager {
+class ResourceManager {
   constructor() {
-    this._backend = new Backend();
+    this._backend = new Backend()
   }
 
-  register<TResource extends Resource>(routePattern: string, constructor: ResourceConstructor<TResource>) {
-    var factory = new ResourceFactory(routePattern, constructor)
-    this._factories.push(factory)
-  }
-
-  get<TResource extends Resource>(url: string) : TResource {
+  get<TResource extends Resource>(constructor: ResourceConstructor<TResource>, url: string) : TResource {
     if(url in this._resources) {
       let resourceRef = this._resources[url]
       let resource = resourceRef.deref()
@@ -46,19 +30,25 @@ export default class ResourceManager {
       }
     }
 
-    for(let factory of this._factories) {
-      if(factory.matches(url)) {
-        let concreteFactory = factory as ResourceFactory<TResource>
-        let resource = concreteFactory.create(url, this._backend)
-        this._resources[url] = new WeakRef(resource)
-        return resource
-      }
-    }
-
-    throw "";
+    let resource = reactive(new constructor(url, this._backend))
+    this._resources[url] = new WeakRef(resource)
+    return resource as TResource
   }
 
-  _resources: Record<string, WeakRef<Resource>> = {};
-  _factories: IResourceFactory[] = [];
-  _backend: Backend;
+  _resources: Record<string, WeakRef<Resource>> = {}
+  _backend: Backend
+}
+
+const ResourceManagerKey : InjectionKey<ResourceManager> = Symbol()
+
+export function getResource<TResource extends Resource>(constructor: ResourceConstructor<TResource>, url: string) {
+  let manager = inject(ResourceManagerKey)
+  if(!manager) {
+    throw new Error("No resource manager available, please install it in Vue JS application through the resource-manager.ts/install method")
+  }
+  return manager.get(constructor, url)
+}
+
+export function install<T>(app: App<T>) {
+  app.provide(ResourceManagerKey, new ResourceManager())
 }

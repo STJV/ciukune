@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class="ciu-control ciu-input")
-  input(placeholder=" ")
+  input(placeholder=" " :type="type" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)")
   div(class='ciu-input-placeholder')
     div {{placeholder}}
 
@@ -11,7 +11,9 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
     props: {
-      'placeholder': String
+      'placeholder': String,
+      'modelValue': String,
+      'type': String
     },
     setup() {
         
