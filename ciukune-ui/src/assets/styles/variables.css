@@ -1,0 +1,29 @@
+/* Copyright © 2021 STJV contact@stjv.com
+
+   This work is free. You can redistribute it and/or modify it under the
+   terms of the Do What The Fuck You Want To Public License, Version 2,
+   as published by Sam Hocevar. See the COPYING file for more details.
+*/
+
+:root {
+  /* Colors */
+  --ciu-color: #000000;
+  --ciu-inactive-color: black;
+  --ciu-muted-color: #757575;
+  --ciu-hint-color: #EEEEEE;
+  --ciu-active-color: #ff5e5e;
+
+  /* Transition / Animation */
+  --ciu-transition-duration: 0.3s;
+  --ciu-feedback-duration: 0.5s;
+
+  /* Layout / Borders */
+  --ciu-border-radius: 3px;
+  --ciu-spacing: 0.7rem;
+  --ciu-box-shadow: 3px 3px 3px 2px #777777;
+  --ciu-box-shadow-small: 1px 1px 1px 1px #777777;
+
+  /* Fonts */
+  --ciu-font-size: 1rem;
+  --ciu-font: 400 var(--ciu-font-size) 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

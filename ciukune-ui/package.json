@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "primeicons": "^4.1.0",
+    "esbuild": "^0.9.4",
     "pug": "^3.0.2",
     "vue": "^3.0.5"
   },

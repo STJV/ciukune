@@ -1,0 +1,25 @@
+/* Copyright © 2021 STJV contact@stjv.com
+
+   This work is free. You can redistribute it and/or modify it under the
+   terms of the Do What The Fuck You Want To Public License, Version 2,
+   as published by Sam Hocevar. See the COPYING file for more details.
+*/
+
+button {
+  background: transparent;
+  border-radius: var(--ciu-border-radius);
+  border: 1px var(--ciu-active-color) solid;
+  border: none;
+  cursor: pointer;
+  padding: var(--ciu-spacing);
+  box-shadow: var(--ciu-box-shadow-small);
+}
+
+button:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+button:hover {
+  background: var(--ciu-hint-color);
+}

@@ -16,7 +16,7 @@ export default defineComponent({
 </script>
 
 <style>
-@import './assets/styles/ciu.css';
+@import './assets/styles/_index.css';
 
 #app {
   height: 100vh;

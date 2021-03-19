@@ -1,0 +1,21 @@
+/* Copyright © 2021 STJV contact@stjv.com
+
+   This work is free. You can redistribute it and/or modify it under the
+   terms of the Do What The Fuck You Want To Public License, Version 2,
+   as published by Sam Hocevar. See the COPYING file for more details.
+*/
+
+.ciu-ripple {
+  background-position: center;
+  transition: background var(--ciu-feedback-duration);
+}
+
+.ciu-ripple:hover {
+  background: var(--ciu-hint-color) radial-gradient(circle, transparent 1%, var(--ciu-hint-color) 1%) center/15000%;
+}
+
+.ciu-ripple:active {
+  background-color: var(--ciu-active-color);
+  background-size: 100%;
+  transition: background 0s;
+}
