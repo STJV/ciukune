@@ -5,14 +5,14 @@
   --ciu-spacing: 0.7rem;
 
   --ciu-font-size: 1rem;
-  --ciu-font: 400 var(--ciu-font-size) Verdana, Geneva, Tahoma, sans-serif;
+  --ciu-font: 400 var(--ciu-font-size) 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-  --ciu-box-shadow: 1px 2px 6px 2px #777777;
+  --ciu-box-shadow: 3px 3px 3px 2px #777777;
   --ciu-box-shadow-small: 1px 1px 1px 1px #777777;
 
   --ciu-color: #000000;
   --ciu-inactive-color: black;
-  --ciu-muted-color: #666666;
+  --ciu-muted-color: #757575;
   --ciu-hint-color: #EEEEEE;
   --ciu-active-color: #ff5e5e;
 }
@@ -26,4 +26,16 @@ body {
   height: 100vh;
   margin: 0px;
   font: var(--ciu-font);
+}
+
+a {
+  font: var(--ciu-font);
+  color: var(--ciu-active-color);
+  text-decoration: none;
+}
+
+a:hover {
+  font: var(--ciu-font);
+  color: var(--ciu-active-color);
+  text-decoration: underline;
 }

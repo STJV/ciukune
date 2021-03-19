@@ -5,8 +5,10 @@ ciu-screen-center
     ciu-input(placeholder="Username")
     ciu-input(placeholder="Password")
     ciu-button(type="submit") Login
-    a(href='#') Forgot Password
-    a(href='#') Register
+    hr
+    div
+      a(href='#') Register
+      a(href='#') Forgot Password ?
 </template>
 
 <script lang="ts">
