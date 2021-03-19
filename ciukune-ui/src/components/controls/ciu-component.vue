@@ -22,8 +22,17 @@ export default defineComponent({
 }
 
 .ciu-component > header {
-  border-bottom: 1px var(--ciu-muted-color) solid;
   padding-bottom: var(--ciu-spacing);
   margin-bottom: var(--ciu-spacing);
+}
+
+.ciu-component > hr {
+  border-bottom: 1px var(--ciu-color) solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-bottom: var(--ciu-spacing);
+  margin-top: var(--ciu-spacing);
+  width: 80%;
 }
 </style>

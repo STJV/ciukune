@@ -27,7 +27,7 @@ export default defineComponent({
 
 .ciu-input > input {
   background: transparent;
-  border-bottom: 1px var(--ciu-inactive-color) solid;
+  border-bottom: 1px var(--ciu-color) solid;
   border-left: none;
   border-right: none;
   border-top: none;

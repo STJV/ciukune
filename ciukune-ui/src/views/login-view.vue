@@ -6,9 +6,9 @@ ciu-screen-center
     ciu-input(placeholder="Password")
     ciu-button(type="submit") Login
     hr
-    div
-      a(href='#') Register
-      a(href='#') Forgot Password ?
+    div(class="links-area")
+      a(href='#') Reset&nbsp;Password
+      a(href='#') Create Account
 </template>
 
 <script lang="ts">
@@ -20,3 +20,21 @@ export default defineComponent({
     },
 })
 </script>
+
+<style scoped>
+.links-area {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.links-area > * {
+  flex: 1 1 1px;
+}
+
+.links-area > *:last-child {
+  border-left: 1px var(--ciu-muted-color) solid;
+  margin-left: var(--ciu-spacing);
+  padding-left: var(--ciu-spacing);
+}
+</style>

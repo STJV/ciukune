@@ -7,21 +7,20 @@
 
 :root {
   /* Colors */
-  --ciu-color: #000000;
-  --ciu-inactive-color: black;
-  --ciu-muted-color: #757575;
-  --ciu-hint-color: #EEEEEE;
   --ciu-active-color: #ff5e5e;
+  --ciu-color: #000000;
+  --ciu-hint-color: #EEEEEE;
+  --ciu-muted-color: #757575;
 
   /* Transition / Animation */
-  --ciu-transition-duration: 0.3s;
   --ciu-feedback-duration: 0.5s;
+  --ciu-transition-duration: 0.3s;
 
   /* Layout / Borders */
   --ciu-border-radius: 3px;
-  --ciu-spacing: 0.7rem;
-  --ciu-box-shadow: 3px 3px 3px 2px #777777;
   --ciu-box-shadow-small: 1px 1px 1px 1px #777777;
+  --ciu-box-shadow: 3px 3px 3px 2px #777777;
+  --ciu-spacing: 0.7rem;
 
   /* Fonts */
   --ciu-font-size: 1rem;
