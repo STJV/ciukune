@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class="ciu-component")
+div(class="ciu-component ciu-flex-column")
   slot
 </template>
 
@@ -16,8 +16,6 @@ export default defineComponent({
 .ciu-component {
   border-radius: var(--ciu-border-radius);
   box-shadow: var(--ciu-box-shadow);
-  display: flex;
-  flex-direction: column;
   padding: var(--ciu-spacing);
 }
 

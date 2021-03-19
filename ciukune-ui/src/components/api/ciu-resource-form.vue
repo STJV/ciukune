@@ -1,7 +1,9 @@
 <template lang="pug">
 //- This components injects a resource for child components (inputs, error feedback, loading feedback...) to access it.
-form()
-  slot
+form(class="ciu-resource-form")
+  ciu-loading-overlay(:loading="resource.loading")
+    div(class="ciu-flex-column")
+      slot
 </template>
 
 <script lang="ts">

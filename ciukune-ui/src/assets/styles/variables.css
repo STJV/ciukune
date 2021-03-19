@@ -7,6 +7,7 @@
 
 :root {
   /* Colors */
+  --ciu-background-color: #FFFFFF;
   --ciu-active-color: #ff5e5e;
   --ciu-color: #000000;
   --ciu-hint-color: #EEEEEE;
@@ -19,6 +20,8 @@
   /* Layout / Borders */
   --ciu-border-radius: 3px;
   --ciu-box-shadow-small: 1px 1px 1px 1px #777777;
+  /* Used to make the shadow fit in the control size, should be equal to offset-x + spread */
+  --ciu-box-shadow-small-margin: 2px;
   --ciu-box-shadow: 3px 3px 3px 2px #777777;
   --ciu-spacing: 0.7rem;
 

@@ -1,0 +1,9 @@
+.ciu-flex-column {
+    display:flex;
+    flex-direction: column;
+}
+
+.ciu-flex-row {
+    display:flex;
+    flex-direction: row;
+}

@@ -10,9 +10,11 @@ button {
   border-radius: var(--ciu-border-radius);
   border: 1px var(--ciu-active-color) solid;
   border: none;
-  cursor: pointer;
-  padding: var(--ciu-spacing);
   box-shadow: var(--ciu-box-shadow-small);
+  cursor: pointer;
+  margin-left: var(--ciu-box-shadow-small-margin);
+  margin-right: var(--ciu-box-shadow-small-margin);
+  padding: var(--ciu-spacing);
 }
 
 button:focus {

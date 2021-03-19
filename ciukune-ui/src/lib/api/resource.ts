@@ -11,6 +11,7 @@ export abstract class Resource {
 
   get error() { return this._error }
   get fieldsErrors() { return this._fieldsErrors }
+  get loading() { return this._loading }
 
   protected async _get<TResponse>() : Promise<TResponse | undefined> {
     return await this._query<TResponse, void>('GET', undefined)
@@ -21,7 +22,10 @@ export abstract class Resource {
   }
 
   private async _query<TResponse, TData>(method: Method, data: TData) {
+    this._loading = true
     let response = await this._backend.query<ApiResponse<TResponse>>(this._url, method, data)
+    this._loading = false
+
     if(!response) {
       return undefined
     }
@@ -46,4 +50,5 @@ export abstract class Resource {
   private _error: string | undefined
   private _url: string
   private _backend: Backend
+  private _loading: boolean = false;
 }
