@@ -43,7 +43,7 @@ export abstract class Resource {
     let errors = response.data as Record<string, string | string[]>
     for(let key in errors) {
       let message = errors[key]
-      if(key == 'details') {
+      if(key == 'detail') {
         this._error = message as string
       }
       else {
