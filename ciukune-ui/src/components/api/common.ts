@@ -9,6 +9,10 @@ export function setCurrentResource(resource: Resource) {
   provide(CurrentResourceKey, resource)
 }
 
-export function getCurrentResource(resource: Resource) {
-    return inject(CurrentResourceKey)
+export function getCurrentResource() {
+    let resource = inject(CurrentResourceKey)
+    if(!resource) {
+      throw new Error("No resource provided.")
+    }
+    return resource
 }

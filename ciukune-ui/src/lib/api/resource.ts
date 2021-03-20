@@ -34,19 +34,19 @@ export abstract class Resource {
       return response.data as TResponse
     }
 
-    let errors = response.data as Record<string, string>
+    let errors = response.data as Record<string, string | string[]>
     for(let key in errors) {
       let message = errors[key]
       if(key == 'details') {
-        this._error = message
+        this._error = message as string
       }
       else {
-        this._fieldsErrors[key] = message
+        this._fieldsErrors[key] = message as string[]
       }
     }
   }
 
-  private _fieldsErrors: Record<string, string> = {}
+  private _fieldsErrors: Record<string, string[]> = {}
   private _error: string | undefined
   private _url: string
   private _backend: Backend
