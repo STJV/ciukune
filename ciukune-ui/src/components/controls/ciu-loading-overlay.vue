@@ -1,9 +1,9 @@
 <template lang="pug">
 //- This components injects a resource for child components (inputs, error feedback, loading feedback...) to access it.
-div(class="ciu-loading-overlay")
-  div(class="background-overlay" v-if="loading")
-  ciu-screen-center(v-if="loading")
-    ciu-spinner
+div(v-bind:class="{'ciu-loading-overlay': true, 'ciu-loading': loading}")
+  div(id='background')
+  ciu-screen-center
+    ciu-spinner(id='spinner')
   div
     slot
 </template>
@@ -27,8 +27,28 @@ export default defineComponent({
   grid-area: 1 / 1
 }
 
-.ciu-loading-overlay > .background-overlay {
-  background: var(--ciu-background-color);
-  opacity: 0.6;
+.ciu-loading-overlay #background, #spinner {
+  opacity: 0;
+  transition:
+    opacity
+    var(--ciu-transition-duration)
+    ease
+    var(--ciu-transition-duration)
+  ;
+  z-index: -1;
 }
+
+.ciu-loading-overlay.ciu-loading #background, #spinner {
+  z-index: 1;
+}
+
+.ciu-loading-overlay.ciu-loading #background {
+  background: var(--ciu-background-color);
+  opacity: 0.5;
+}
+
+.ciu-loading-overlay.ciu-loading #spinner {
+  opacity: 1;
+}
+
 </style>
