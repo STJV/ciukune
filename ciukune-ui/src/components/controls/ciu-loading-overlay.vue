@@ -29,26 +29,19 @@ export default defineComponent({
 
 .ciu-loading-overlay #background, #spinner {
   opacity: 0;
-  transition:
-    opacity
-    var(--ciu-transition-duration)
-    ease
-    var(--ciu-transition-duration)
-  ;
+  transition: opacity var(--ciu-transition-duration) ease var(--ciu-transition-duration);
   z-index: -1;
-}
-
-.ciu-loading-overlay.ciu-loading #background, #spinner {
-  z-index: 1;
 }
 
 .ciu-loading-overlay.ciu-loading #background {
   background: var(--ciu-background-color);
   opacity: 0.5;
+  z-index: 1;
 }
 
 .ciu-loading-overlay.ciu-loading #spinner {
   opacity: 1;
+  z-index: 1;
 }
 
 </style>
