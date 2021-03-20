@@ -4,7 +4,7 @@ ciu-screen-center
     header {{ $t('login-view.title') }}
     ciu-resource-form(:resource="resource" @submit.prevent="resource.refresh()")
       ciu-resource-input(field="email")
-        ciu-text-field(:placeholder="$t('login-view.email')" v-model="resource.username")
+        ciu-text-field(:placeholder="$t('login-view.email')" v-model="resource.email")
       ciu-resource-input(field="password")
         ciu-text-field(password :placeholder="$t('login-view.password')" v-model="resource.password")
       ciu-button(type="submit") {{ $t('login-view.login') }} 
