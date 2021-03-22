@@ -14,7 +14,7 @@ export abstract class Resource {
   get loading() { return this._loading }
 
   resetErrors() {
-    this._error = undefined
+    this._error = ""
     this._fieldsErrors = {}
   }
 
@@ -35,11 +35,12 @@ export abstract class Resource {
       return undefined
     }
 
+    this.resetErrors()
+
     if(response.status < 400) {
       return response.data as TResponse
     }
 
-    this.resetErrors()
     let errors = response.data as Record<string, string | string[]>
     for(let key in errors) {
       let message = errors[key]
