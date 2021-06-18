@@ -18,7 +18,7 @@ export class Backend {
   }
 
   async query<TResponse>(url: string, method: Method, data: any) {
-    let response = await axios.request<TResponse>({
+    let response = await this._instance.request<TResponse>({
       data: data,
       method: method,
       url: url,

@@ -1,13 +1,20 @@
+import { Backend } from '../../backend'
 import { Resource } from '../../resource'
 import { getResource } from '../../resource-manager'
 
 interface LoginResponse {
-  token: string
+  access: string
+  refresh: string
 }
 
 class LoginResource extends Resource {
   email: string | undefined
   password: string | undefined
+
+  constructor(url: string, backend: Backend) {
+    super(url, backend)
+    this._loginBackend = backend
+  }
 
   async refresh() {
     let response = await this._post<LoginResponse, {}>({
@@ -16,11 +23,14 @@ class LoginResource extends Resource {
     })
 
     if(!response) {
-      return;
+      return false;
     }
 
-    console.log(response.token)
+    this._loginBackend.setToken(response.access)
+    return true
   }
+
+  private _loginBackend: Backend
 }
 
 export function getLoginResource() {

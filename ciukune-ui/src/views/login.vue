@@ -2,7 +2,7 @@
 ciu-screen-center
   ciu-component
     header {{ $t('login-view.title') }}
-    ciu-resource-form(:resource="login" @submit.prevent="login.refresh()")
+    ciu-resource-form(:resource="login" @submit.prevent="refresh()")
       ciu-resource-errors
       ciu-resource-input(field="email")
         ciu-text-field(:placeholder="$t('login-view.email')" v-model="login.email")
@@ -18,11 +18,21 @@ ciu-screen-center
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { getLoginResource } from '../lib/api/resources/auth/login'
+import { getMeResource } from '../lib/api/resources/auth/me'
 
 export default defineComponent({
     setup() {
+      const login = getLoginResource()
+      const me = getMeResource()
+
+      async function refresh() {
+        if(await login.refresh()) {
+          await me.refresh()
+        }
+      }
       return {
-        login: getLoginResource()
+        login: getLoginResource(),
+        refresh: refresh
       }
     },
 })
