@@ -2,12 +2,12 @@
 ciu-screen-center
   ciu-component
     header {{ $t('login-view.title') }}
-    ciu-resource-form(:resource="resource" @submit.prevent="resource.refresh()")
+    ciu-resource-form(:resource="login" @submit.prevent="login.refresh()")
       ciu-resource-errors
-      ciu-resource-input(field="email")
-        ciu-text-field(:placeholder="$t('login-view.email')" v-model="resource.email")
-      ciu-resource-input(field="password")
-        ciu-text-field(password :placeholder="$t('login-view.password')" v-model="resource.password")
+      ciu-login-input(field="email")
+        ciu-text-field(:placeholder="$t('login-view.email')" v-model="login.email")
+      ciu-login-input(field="password")
+        ciu-text-field(password :placeholder="$t('login-view.password')" v-model="login.password")
       ciu-button(type="submit") {{ $t('login-view.login') }} 
     hr
     div(class="links-area")
@@ -22,7 +22,7 @@ import { getLoginResource } from '../lib/api/resources/auth/login'
 export default defineComponent({
     setup() {
       return {
-        resource: getLoginResource()
+        login: getLoginResource()
       }
     },
 })

@@ -16,7 +16,8 @@
         },
         {
             "type": "firefox",
-            "request": "attach",
+            "request": "launch",
+            "reAttach": true,
             "name": "Attach to Firefox",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}",
