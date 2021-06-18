@@ -1,5 +1,5 @@
 <template lang="pug">
-login-view
+router-view
 </template>
 
 <script lang="ts">

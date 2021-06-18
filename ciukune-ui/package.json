@@ -12,7 +12,8 @@
     "eslint": "^7.22.0",
     "pug": "^3.0.2",
     "vue": "^3.0.5",
-    "vue-i18n": "^9.0.0"
+    "vue-i18n": "^9.0.0",
+    "vue-router": "^4.0.9"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",
