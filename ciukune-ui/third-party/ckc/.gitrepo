@@ -4,8 +4,9 @@
 ; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
 ;
 [subrepo]
-	remote = none
-	branch = master
-	commit = 
+	remote = https://github.com/STJV/ckc
+	branch = main
+	commit = 8c5f2f5a6a57102dba656e64acf3d1a35eac12df
 	method = merge
 	cmdver = 0.4.0
+	parent = 6af9c88dfa1af150146e45371aa0dfa11dd3e9ee
