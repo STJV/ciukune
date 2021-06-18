@@ -4,7 +4,7 @@ router-view
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LoginView from './views/login-view.vue'
+import LoginView from './views/login.vue'
 
 
 export default defineComponent({
