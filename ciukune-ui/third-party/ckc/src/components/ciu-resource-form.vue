@@ -8,9 +8,9 @@ form(class="ciu-resource-form")
 
 <script lang="ts">
 import { PropType } from 'vue';
-import { Resource } from '../../lib/api/resource'
+import { Resource } from '../core/resource'
 import { defineComponent } from 'vue'
-import { setCurrentResource } from './common'
+import { setCurrentResource } from '../../../../src/components/api/common'
 
 export default defineComponent({
   props: {

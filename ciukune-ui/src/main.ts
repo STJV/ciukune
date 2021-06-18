@@ -1,13 +1,11 @@
 import App from './app.vue'
-import apiResources from './plugins/api-resources'
-import ciuControls from './plugins/ciu-controls'
 import i18n from './plugins/i18n'
 import router from './plugins/router'
 import { createApp } from 'vue'
+import ckc from '@ciukune/ckc'
 
 createApp(App)
-    .use(apiResources)
-    .use(ciuControls)
+    .use(ckc)
     .use(i18n)
     .use(router)
     .mount('#app')

@@ -1,5 +1,5 @@
-import { Resource } from '../../resource'
-import { getResource } from '../../resource-manager'
+import { Resource } from '@ciukune/ckc'
+import { getResource } from '@ciukune/ckc'
 import { User } from '../../types/user'
 
 class MeResource extends Resource {

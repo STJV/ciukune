@@ -40,6 +40,6 @@ export function getResource<TResource extends Resource>(constructor: ResourceCon
   return manager.get(constructor, url)
 }
 
-export function install<T>(app: App<T>) {
+export function installResourceManager<T>(app: App<T>) {
   app.provide(ResourceManagerKey, new ResourceManager())
 }

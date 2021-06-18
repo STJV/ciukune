@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@ciukune/ckc": "file:third-party/ckc",
     "axios": "^0.21.1",
     "esbuild": "^0.9.4",
     "eslint": "^7.22.0",

@@ -1,28 +1,29 @@
 <template lang="pug">
 //- This components injects a resource for child components (inputs, error feedback, loading feedback...) to access it.
-ciu-input(:errors="errors")
-  slot
+div(class="ciu-control ciu-resource-errors" v-if="error") {{ error }}
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { computed } from 'vue'
-import { getCurrentResource } from './common'
+import { getCurrentResource } from '../core/current-resource'
 
 export default defineComponent({
   props: {
-    'field': {
-        type: String,
-        required: true
-    },
   },
   setup(props) {
     let resource = getCurrentResource()
-    let errors = computed(() => resource.fieldsErrors[props.field])
+    let error = computed(() => resource.error)
     return {
-        resource,
-        errors: errors
+        error: error
     }
   },
 })
 </script>
+
+<style>
+.ciu-resource-errors {
+    font-size: 80%;
+    color: var(--ciu-error-color);
+}
+</style>

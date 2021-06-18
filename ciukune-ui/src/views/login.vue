@@ -2,11 +2,11 @@
 ciu-screen-center
   ciu-component
     header {{ $t('login-view.title') }}
-    ciu-resource-form(:resource="login" @submit.prevent="refresh()")
-      ciu-resource-errors
-      ciu-resource-input(field="email")
+    ciu-api-form(:resource="login" @submit.prevent="refresh()")
+      ciu-api-errors
+      ciu-api-input(field="email")
         ciu-text-field(:placeholder="$t('login-view.email')" v-model="login.email")
-      ciu-resource-input(field="password")
+      ciu-api-input(field="password")
         ciu-text-field(password :placeholder="$t('login-view.password')" v-model="login.password")
       ciu-button(type="submit") {{ $t('login-view.login') }} 
     hr
@@ -17,8 +17,8 @@ ciu-screen-center
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { getLoginResource } from '../lib/api/resources/auth/login'
-import { getMeResource } from '../lib/api/resources/auth/me'
+import { getLoginResource } from '../api/resources/auth/login'
+import { getMeResource } from '../api/resources/auth/me'
 
 export default defineComponent({
     setup() {

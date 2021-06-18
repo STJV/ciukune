@@ -1,6 +1,6 @@
-import { Backend } from '../../backend'
-import { Resource } from '../../resource'
-import { getResource } from '../../resource-manager'
+import { Backend } from '@ciukune/ckc'
+import { Resource } from '@ciukune/ckc'
+import { getResource } from '@ciukune/ckc'
 
 interface LoginResponse {
   access: string

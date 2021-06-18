@@ -10,7 +10,7 @@ import { defineComponent } from 'vue'
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 import LoginView from './views/login.vue'
-import { getMeResource } from './lib/api/resources/auth/me'
+import { getMeResource } from './api/resources/auth/me'
 
 
 export default defineComponent({
@@ -35,7 +35,6 @@ export default defineComponent({
 </script>
 
 <style>
-@import './assets/styles/_index.css';
 
 #app {
   height: 100vh;

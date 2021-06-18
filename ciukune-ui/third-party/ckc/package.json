@@ -1,0 +1,15 @@
+{
+  "name": "@ciukune/ckc",
+  "version": "0.0.1",
+  "description": "Core components of ciukune UI",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "STJV",
+  "license": "WTFPL",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "vue": "^3.1.1"
+  }
+}
