@@ -11,11 +11,11 @@
 }
 
 .ciu-ripple:hover {
-  background: var(--ciu-hint-color) radial-gradient(circle, transparent 1%, var(--ciu-hint-color) 1%) center/15000%;
+  background: var(--ciu-primary-light) radial-gradient(circle, transparent 1%, var(--ciu-primary-light) 1%) center/15000%;
 }
 
 .ciu-ripple:active {
-  background-color: var(--ciu-active-color);
+  background-color: var(--ciu-primary);
   background-size: 100%;
   transition: background 0s;
 }

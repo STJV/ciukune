@@ -34,7 +34,7 @@ export default defineComponent({
 }
 
 .ciu-loading-overlay.ciu-loading #background {
-  background: var(--ciu-background-color);
+  background: var(--ciu-surface);
   opacity: 0.5;
   z-index: 1;
 }

@@ -2,7 +2,9 @@
 ciu-screen-center(v-if="!me.state")
   ciu-loading-overlay(:loading="me.loading")
     login-view
-router-view(v-else)
+div(v-else)
+  ciukune-navbar
+  router-view
 </template>
 
 <script lang="ts">
@@ -10,13 +12,15 @@ import { defineComponent } from 'vue'
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 import LoginView from './views/login.vue'
+import CiukuneNavbar from './components/ciukune-navbar.vue'
 import { getMeResource } from './api/resources/auth/me'
 
 
 export default defineComponent({
   name: 'App',
   components: {
-    LoginView
+    LoginView,
+    CiukuneNavbar
   },
   setup() {
     const loading = ref(false)

@@ -5,7 +5,7 @@ div(class="ciu-spinner")
 <style>
 .ciu-spinner {
   animation: ciu-spinner 1.2s linear infinite;
-  border-color: var(--ciu-active-color) transparent var(--ciu-active-color) transparent;
+  border-color: var(--ciu-primary) transparent var(--ciu-primary) transparent;
   border-radius: 50%;
   border-style: solid;
   border-width: 6px;

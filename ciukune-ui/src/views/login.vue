@@ -46,7 +46,7 @@ export default defineComponent({
 }
 
 .links-area > *:last-child {
-  border-left: 1px var(--ciu-muted-color) solid;
+  border-left: 1px var(--ciu-muted-on-surface) solid;
   margin-left: var(--ciu-spacing);
   padding-left: var(--ciu-spacing);
 }

@@ -41,7 +41,7 @@ export default defineComponent({
 
 .ciu-text-field > input {
   background: transparent;
-  border-bottom: 1px var(--ciu-color) solid;
+  border-bottom: 1px var(--ciu-primary-dark) solid;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -52,11 +52,12 @@ export default defineComponent({
 
 .ciu-text-field > input:focus {
   outline: none;
-  border-bottom: 1px var(--ciu-active-color) solid;
+  border-bottom: 1px var(--ciu-primary-light) solid;
 }
 
 .ciu-text-field-placeholder {
-  color: var(--ciu-muted-color);
+  color: var(--ciu-hint-on-surface);
+  opacity: 0.5;
   display: flex;
   font-size: 90%;
   grid-area: 1 / 1;

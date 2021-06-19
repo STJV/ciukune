@@ -13,12 +13,12 @@ body {
 
 a {
   font: var(--ciu-font);
-  color: var(--ciu-active-color);
+  color: var(--ciu-primary);
   text-decoration: none;
 }
 
 a:hover {
   font: var(--ciu-font);
-  color: var(--ciu-active-color);
+  color: var(--ciu-primary-dark);
   text-decoration: underline;
 }

@@ -6,9 +6,10 @@
 */
 
 button {
-  background: transparent;
+  background: var(--ciu-primary);
+  color: var(--ciu-on-primary);
   border-radius: var(--ciu-border-radius);
-  border: 1px var(--ciu-active-color) solid;
+  border: 1px var(--ciu-primary) solid;
   border: none;
   box-shadow: var(--ciu-box-shadow-small);
   cursor: pointer;
@@ -23,5 +24,5 @@ button:focus {
 }
 
 button:hover {
-  background: var(--ciu-hint-color);
+  background: var(--ciu-primary-dark);
 }

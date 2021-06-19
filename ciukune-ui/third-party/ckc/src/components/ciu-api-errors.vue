@@ -24,6 +24,6 @@ export default defineComponent({
 <style>
 .ciu-resource-errors {
     font-size: 80%;
-    color: var(--ciu-error-color);
+    color: var(--ciu-error);
 }
 </style>

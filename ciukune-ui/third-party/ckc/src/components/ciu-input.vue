@@ -24,7 +24,7 @@ export default defineComponent({
 
 <style>
 .ciu-input-errors {
-  color: var(--ciu-error-color);
+  color: var(--ciu-error);
   font-size: 80%;
   margin-top: 2px;
 }

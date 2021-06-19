@@ -7,12 +7,24 @@
 
 :root {
   /* Colors */
-  --ciu-active-color: #ff5e5e;
-  --ciu-background-color: #FFFFFF;
-  --ciu-color: #000000;
-  --ciu-error-color: #db7516;
-  --ciu-hint-color: #EEEEEE;
-  --ciu-muted-color: #757575;
+  --ciu-primary: #c62828;
+  --ciu-primary-dark: #8e0000;
+  --ciu-primary-light: #ff5f52;
+  --ciu-on-primary: #ffffff;
+
+  --ciu-secondary: #bdbdbd;
+  --ciu-secondary-dark: #8d8d8d;
+  --ciu-secondary-light: #efefef;
+  --ciu-on-secondary: #000000;
+
+  --ciu-surface: #FAFAFA;
+  --ciu-on-surface: #000000;
+
+  --ciu-background: #FFFFFF;
+  --ciu-on-background: #000000;
+
+  --ciu-error: #db7516;
+  --ciu-on-error: #000000;
 
   /* Transition / Animation */
   --ciu-feedback-duration: 0.5s;
