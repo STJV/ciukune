@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class="ciu-navbar")
+div(class="ciu-flex-row ciu-primary-dark")
   div(class=ciu-navbar-brand)
     slot(name="brand")
   div(class=ciu-navbar-links)
@@ -9,18 +9,6 @@ div(class="ciu-navbar")
 </template>
 
 <style>
-.ciu-navbar {
-  background: var(--ciu-active-color);
-}
-
-.ciu-navbar > div {
-  align-items:center;
-  display: flex;
-  flex-direction: row;
-  margin-left: var(--ciu-control-spacing);
-  margin-right: var(--ciu-control-spacing);
-}
-
 .ciu-navbar > .ciu-navbar-brand, .ciu-navbar-end {
   flex-grow: 0;
 }

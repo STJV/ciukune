@@ -15,3 +15,17 @@
   --ciu-border-color: rgba(var(--ciu-on-surface), 0.8);
 }
 
+.ciu-primary {
+  background-color: var(--ciu-primary-dark);
+  color: var(--ciu-on-primary);
+}
+
+.ciu-primary-dark {
+  background-color: var(--ciu-primary-dark);
+  color: var(--ciu-on-primary);
+}
+
+.ciu-primary-dark a {
+  background-color: var(--ciu-primary-dark);
+  color: var(--ciu-on-primary);
+}
